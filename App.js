@@ -7,8 +7,10 @@ export default class extends React.Component {
   getLocation = async () => {
     try {
       await Location.requestPermissionsAsync();
-      const location = await Location.getCurrentPositionAsync();
-      console.log(location);
+      const {
+        coords : {latitude, longitude}
+      } = await Location.getCurrentPositionAsync();
+      console.log(latitude, longitude);
     } catch (error) {
       Alert.alert("I Can't find you", "So sad");
     }
