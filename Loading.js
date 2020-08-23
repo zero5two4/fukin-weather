@@ -1,12 +1,13 @@
-import { StyleSheet, View, Text } from 'react-native';
-import React from 'react';
+import { StyleSheet, View, Text, StatusBar } from "react-native";
+import React from "react";
 
-export default function Loading(){
-    return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Getting the fukin-weather</Text>
-        </View>
-    );
+export default function Loading() {
+  return (
+    <View style={styles.container}>
+      <StatusBar barStyle="dark-content" />
+      <Text style={styles.text}>Getting the fukin-weather</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FDF6AA",
     justifyContent: "flex-end",
     paddingHorizontal: 30,
-    paddingVertical: 100
+    paddingVertical: 100,
   },
   text: {
     fontSize: 30,
