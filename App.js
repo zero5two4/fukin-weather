@@ -21,7 +21,7 @@ export default class extends React.Component {
     } = await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}&units=metric`
     );
-    //console.log({ data });
+    console.log({ weather });
     this.setState({ isLoading: false, 
       temp, 
       condition: weather[0].main });
